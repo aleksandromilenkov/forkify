@@ -95,13 +95,12 @@ const controlAddRecipe = async function (newRecipe) {
 
     // Upload the new recipe data
     await model.uploadRecipe(newRecipe);
-    console.log(model.state.recipe);
 
     // Render recipe
     recipeView.render(model.state.recipe);
 
     // Success message
-    addRecipeView.renderMessage();
+    addRecipeView.renderSuccessMessage();
 
     // Render bookmark view
     bookmarksView.render(model.state.bookmarks);
@@ -127,5 +126,6 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
+  console.log('Welcome to Forkify. Greetings from Macedonia');
 };
 init();

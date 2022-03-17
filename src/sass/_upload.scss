@@ -22,6 +22,9 @@
     cursor: pointer;
     border: none;
     background: none;
+    @media only screen and (max-width: 580px) {
+      right: 20%;
+    }
   }
 }
 
@@ -35,6 +38,10 @@
   backdrop-filter: blur(4px);
   z-index: 100;
   transition: all 0.5s;
+  @media only screen and (max-width: 580px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem 2.5rem;
+  }
 }
 
 .hidden {
@@ -46,13 +53,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem 6rem;
-
+  @media only screen and (max-width: 580px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem 2.5rem;
+  }
   &__column {
     display: grid;
     grid-template-columns: 1fr 2.8fr;
     align-items: center;
     gap: 1.5rem;
-
+    @media only screen and (max-width: 580px) {
+      width: 80%;
+    }
     & label {
       font-size: 1.5rem;
       font-weight: 600;
@@ -85,11 +97,15 @@
   }
 
   &__heading {
-    font-size: 2.25rem;
+    font-size: 8.25rem;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 1rem;
     grid-column: 1/-1;
+    color: green;
+    @media only screen and (max-width: 580px) {
+      text-align: center;
+    }
   }
 
   &__btn {

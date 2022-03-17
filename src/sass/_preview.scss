@@ -74,6 +74,10 @@
     max-width: 25rem;
     white-space: nowrap;
     overflow: hidden;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 180%;
+      max-width: 40rem;
+    }
   }
 
   &__publisher {
@@ -81,6 +85,9 @@
     color: $color-grey-dark-2;
     text-transform: uppercase;
     font-weight: 600;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 150%;
+    }
   }
 
   &__user-generated {

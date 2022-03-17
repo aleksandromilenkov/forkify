@@ -125,7 +125,10 @@
   border: none;
   background: none;
   cursor: pointer;
-
+  @media only screen and (max-width: $bp-small) {
+    height: 4rem;
+    width: 4rem;
+  }
   svg {
     height: 100%;
     width: 100%;
@@ -149,6 +152,9 @@
 
   &:not(:last-child) {
     margin-right: 0.3rem;
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 1rem;
+    }
   }
 }
 

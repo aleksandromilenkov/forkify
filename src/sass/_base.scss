@@ -30,9 +30,14 @@ $bp-smallest: 31.25em; // 500px
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-
   @media only screen and (max-width: $bp-medium) {
     font-size: 50%;
+  }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 42%;
+  }
+  @media only screen and (max-width: 420px) {
+    font-size: 38%;
   }
 }
 
@@ -67,5 +72,8 @@ body {
     max-width: 100%;
     margin: 0;
     border-radius: 0;
+  }
+  @media only screen and (max-width: 680px) {
+    grid-template-rows: auto minmax(100rem, auto);
   }
 }

@@ -2,6 +2,9 @@
   padding: 3rem 0;
   display: flex;
   flex-direction: column;
+  @media only screen and (max-width: 680px) {
+    grid-column: span 2;
+  }
 }
 
 .results {
@@ -12,6 +15,8 @@
 .pagination {
   margin-top: auto;
   padding: 0 3.5rem;
+  display: flex;
+  justify-content: space-between;
 
   &::after {
     content: '';
@@ -19,12 +24,38 @@
     clear: both;
   }
 
+  &__totalPages {
+    cursor: pointer;
+    border-radius: 10rem;
+    transition: all 200ms;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 190%;
+    }
+    span {
+      font-size: 1.5rem;
+      display: inline-block;
+      padding-left: 1rem;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 120%;
+      }
+    }
+  }
   &__btn {
     &--prev {
-      float: left;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 190%;
+      }
     }
     &--next {
-      float: right;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 190%;
+      }
     }
   }
 }
@@ -34,9 +65,11 @@
   font-size: 1.2rem;
   padding: 0 3.5rem;
   margin-top: 4rem;
-
-  .twitter-link:link,
-  .twitter-link:visited {
+  @media only screen and (max-width: $bp-small) {
+    font-size: 150%;
+  }
+  .portfolio-link:link,
+  .portfolio-link:visited {
     color: $color-grey-dark-2;
   }
 }
